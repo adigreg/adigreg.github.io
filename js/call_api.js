@@ -1,6 +1,7 @@
 async function getData() {
-    let response = await fetch('https://pewresearch.org/wp-json/prc-api/v2/pathways-2020/?auth=rIoneC5sH1NhDLwXcSjzDCxXosA3&question=NEWSHEARDUA_a');
-    let data = await response.json();
-    return data;
+    let response = await fetch('https://api.nasa.gov/planetary/apod?api_key=yab4F9E4bLvK9i0eaPWs0hsWCGT9adBfmcX1y0gR');
+    let result = await response.json();
+    caption = result.title;
+    document.body.innerHTML = <img src={result.url} alt={caption}></img>
 }
-getData().then(data => console.log(data));
+getData().then(result => console.log(result));
