@@ -26,17 +26,20 @@ body {
 	color: seashell;
 }
 
+.menu-link:hover {
+    color: white;
+}
+
 .menu-item {
 	height: 3em;
 	align-self: center;
     margin: 5px;
     transition-timing-function: ease-out;
-    transition-duration: 1s;
+    transition-duration: 0.2s;
 }
 
-.menu-link:hover {
-    font-size:2.5em;
-    color: white;
+.menu-item:hover {
+	transform: scale(1.2);
 }
 
 .title-wrapper {
